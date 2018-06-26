@@ -1,0 +1,18 @@
+Duck, dynamic, strong since version 3.5:
+The tokenized data is Duck , dynamic , strong since version 3 . 5 : 
+The stemmed data is duck dynam strong sinc version 3.5 
+The tagged parts of speech are ('Duck', 'NNP') (',', ',') ('dynamic', 'JJ') (',', ',') ('strong', 'JJ') ('since', 'IN') ('version', 'NN') ('3', 'CD') ('.', '.') ('5', 'CD') (':', ':') 
+The lemmatized data is Duck dynamic strong since version 3.5 
+The trigrams are [('dynamic', ',', 'strong'), ('strong', 'since', 'version'), ('version', '3', '.'), ('.', '5', ':')]
+The NER data is (S
+  (GPE Duck/NNP)
+  ,/,
+  dynamic/JJ
+  ,/,
+  strong/JJ
+  since/IN
+  version/NN
+  3/CD
+  ./.
+  5/CD
+  :/:)
