@@ -8,7 +8,8 @@ from nltk.stem import PorterStemmer
 from nltk import pos_tag
 from nltk.stem import WordNetLemmatizer
 from nltk import ne_chunk
-from nltk import ngrams
+from nltk import LancasterStemmer
+from nltk import SnowballStemmer
 
 html = urllib.request.urlopen("https://en.wikipedia.org/wiki/Python_(programming_language)")  # Open the file using url
 soup = BeautifulSoup(html, "html.parser")  # Read file using BeautifulSoup
@@ -63,5 +64,18 @@ writeFile.write(str(trigrams) + "\n")
 writeFile.write("The NER data is ")  # Find the NER data and write it to the file
 writeFile.write(str(ne_chunk(pos_tag(tokens))))
 writeFile.write("\n")
+
+# BONUS: TYPES OF STEMMING
+writeFile.write("BONUS: types of stemming " + "\n")
+pStem = PorterStemmer()
+writeFile.write("The Porter stemmer is " + str(pStem.stem('neatly')) + "\n")
+lStem = LancasterStemmer()
+writeFile.write("The Lancaster stemmer is " + str(lStem.stem('neatly')) + "\n")
+sStem = SnowballStemmer('english')
+writeFile.write("The Snowball stemmer is " + str(sStem.stem('neatly')) + "\n")
+
+# The Porter stemmer takes a word and makes a truncated version
+# The Lancaster stemmer takes a word and makes a truncated, grammatically correct version
+# The Snowball stemmer takes a word and a language and makes a truncated, grammatically correct version
 
 writeFile.close()  # Close the file

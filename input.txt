@@ -16,3 +16,7 @@ The NER data is (S
   ./.
   5/CD
   :/:)
+BONUS: types of stemming 
+The Porter stemmer is neatli
+The Lancaster stemmer is neat
+The Snowball stemmer is neat
